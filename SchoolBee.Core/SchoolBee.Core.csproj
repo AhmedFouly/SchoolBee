@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SchoolBee.Domain\SchoolBee.Domain.csproj" />
+    <ProjectReference Include="..\SchoolBee.Infrastructure\SchoolBee.Infrastructure.csproj" />
+    <ProjectReference Include="..\SchoolBee.Service\SchoolBee.Service.csproj" />
+  </ItemGroup>
+
+</Project>
