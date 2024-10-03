@@ -11,14 +11,14 @@ namespace SchoolBee.Domain.Models
     public class DepartmentSubject
     {
         [Key]
-        public int DeptartmentSubjectId { get; set; }
-        public int DepartmentId { get; set; }
-        public int SubjectId { get; set; }
+        public int DeptSubID { get; set; }
+        public int DID { get; set; }
+        public int SubID { get; set; }
 
-        [ForeignKey("DepartmentId")]
+        [ForeignKey("DID")]
         public virtual Department Department { get; set; }
 
-        [ForeignKey("SubjectId")]
+        [ForeignKey("SubID")]
         public virtual Subject Subjects { get; set; }
     }
 }

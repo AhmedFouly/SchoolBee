@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -9,12 +10,17 @@ namespace SchoolBee.Domain.Models
 {
     public class Student
     {
-        public int Id { get; set; }
+        [Key]
+        public int StudID { get; set; }
+        [StringLength(200)]
         public string Name { get; set; }
+        [StringLength(500)]
         public string Address { get; set; }
+        [StringLength(500)]
         public string Phone { get; set; }
-        public int? DepartmentId { get; set; }
-        [ForeignKey("DepartmentId")]
+        public int? DID { get; set; }
+
+        [ForeignKey("DID")]
         public virtual Department Department { get; set; }
     }
 }
